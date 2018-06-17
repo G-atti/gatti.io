@@ -19,8 +19,6 @@ phases:
       - echo Entered the build phase on `date`...
       - echo Building the site.
       - npm run build
-      - echo Converting all JPGs in to progressive JPGs.
-      - find ./_output/assets/img -iname \*.jpg -exec convert {} -interlace plane {} \;
   post_build:
     commands:
       - echo Entered the post_build phase...
